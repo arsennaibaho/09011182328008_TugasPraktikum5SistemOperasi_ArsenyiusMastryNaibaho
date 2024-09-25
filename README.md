@@ -35,7 +35,7 @@
 ![Screenshot from 2024-09-24 22-24-10](https://github.com/user-attachments/assets/c6cb2746-6a46-4b23-9e35-2e7224957336)
 
 ## 4. Bash script
-### a. uat 3 buah script p1.sh, p2.sh, p3.sh dengan isi masing-masing : 
+### a. Buat 3 buah script p1.sh, p2.sh, p3.sh dengan isi masing-masing : 
 ```
 p1.sh 
 #! /bin/bash
