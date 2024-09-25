@@ -36,30 +36,24 @@
 
 ## 4. Bash script
 ### a. Buat 3 buah script p1.sh, p2.sh, p3.sh dengan isi masing-masing : 
-```
-p1.sh 
-#! /bin/bash
-echo “Program p1”
+p1.sh  
+#! /bin/bash  
+echo “Program p1”  
 ls –l
-```
 ![Screenshot from 2024-09-24 22-46-48](https://github.com/user-attachments/assets/a361e249-a70b-44a4-bcde-f337cddb36f2)
 ![Screenshot from 2024-09-24 22-46-32](https://github.com/user-attachments/assets/c73227a8-172b-426f-b7d3-9b1ca4f86809)
 
-```
-p2.sh
-#! /bin/bash
-echo “Program p2”
+p2.sh  
+#! /bin/bash  
+echo “Program p2”  
 who
-```
 ![Screenshot from 2024-09-24 22-50-08](https://github.com/user-attachments/assets/1428eca4-fea2-4f3b-81e7-3881730957bd)
 ![Screenshot from 2024-09-24 22-49-32](https://github.com/user-attachments/assets/919b3ff8-b327-4962-a299-c7d50930e8c2)
 
-```
-p3.sh
-#! /bin/bash
-echo “Program p3”
+p3.sh  
+#! /bin/bash  
+echo “Program p3”  
 ps x
-```
 ![Screenshot from 2024-09-24 22-52-00](https://github.com/user-attachments/assets/596ca918-9785-4a97-9a56-220856ab8b26)
 ![Screenshot from 2024-09-24 22-52-53](https://github.com/user-attachments/assets/bee47bf7-4ddf-47fa-b249-e75abdcd5889)
 
@@ -81,40 +75,32 @@ $ ( ./p1.sh ; ./p3.sh ) &
 
 ## 5. Jobs
 ### a. Buat shell-script yang melakukan loop dengan nama pwaktu.sh, setiap 10 detik, kemudian menyimpan tanggal dan jam pada file hasil.
-```
-#!/bin/bash
-while [ true ]
-do
-date >> hasil
-sleep 10
+#!/bin/bash  
+while [ true ]  
+do  
+date >> hasil  
+sleep 10  
 done
-```
 ![Screenshot from 2024-09-25 07-53-41](https://github.com/user-attachments/assets/e67bc67d-6ae4-45b7-89db-877bbb891108)
 ![Screenshot from 2024-09-25 07-51-06](https://github.com/user-attachments/assets/684a7d9d-7e06-42c8-b4e4-042077e19066)
 ![Screenshot from 2024-09-25 07-56-47](https://github.com/user-attachments/assets/12e20bc8-c2dc-4f0e-835e-7e0d48701784)
 
 ### b. jalankan sebagai background; kemudian jalankan satu program (utilitas find) di background sebagai berikut :
-```
+$ jobs  
+$ find / -print > files 2>/dev/null &  
 $ jobs
-$ find / -print > files 2>/dev/null &
-$ jobs
-```
 ![Screenshot from 2024-09-25 08-01-09](https://github.com/user-attachments/assets/b49812ad-6e8f-4d94-8802-67107db72ccc)
 ![Screenshot from 2024-09-25 08-07-05](https://github.com/user-attachments/assets/0fd641d7-5302-46ce-abb4-2f1bd4e2fa7d)
 
 ### c. jadikan program ke 1 sebagai foreground, tekan ^Z dan kembalikan program tersebut ke background
-```
-$ fg %1
+$ fg %1  
 $ bg
-```
 ![Screenshot from 2024-09-25 08-10-52](https://github.com/user-attachments/assets/5eb7a9b5-8da6-41a0-9f08-668d56828d71)
 ![Screenshot from 2024-09-25 08-16-40](https://github.com/user-attachments/assets/d8a0e60a-4c7b-41a1-80af-942762ccb908)
 
 ### stop program background dengan utilitas kill
-```
-$ ps x
+$ ps x  
 $ kill [Nomor PID]
-```
 ![Screenshot from 2024-09-25 08-30-04](https://github.com/user-attachments/assets/c965ca64-a9e2-4faa-92e3-0a783c90de6f)
 ![Screenshot from 2024-09-25 08-30-32](https://github.com/user-attachments/assets/617a2622-adc4-4311-a32f-a6339d32bde0)
 ![Screenshot from 2024-09-25 08-31-02](https://github.com/user-attachments/assets/1e6f9ac5-f80d-4d58-b11b-4bce357e4440)
@@ -123,10 +109,8 @@ $ kill [Nomor PID]
 
 ## 6. History
 ### a. Ganti nilai HISTSIZE dari 1000 menjadi 20
-```
-$ HISTSIZE=20
+$ HISTSIZE=20  
 $ h
-```
 ![Screenshot from 2024-09-25 08-37-56](https://github.com/user-attachments/assets/09d66ab0-d7c0-45d6-b2bc-901dfa5cb026)
 
 ### b. Gunakan fasilitas history dengan mengedit instruksi baris ke 5 dari instruksi yang terakhir dilakukan
