@@ -16,7 +16,7 @@
 ![Screenshot from 2024-09-24 20-54-35](https://github.com/user-attachments/assets/ce6078d9-9168-4d6f-985c-8ff0a3ad6114)
 ![Screenshot from 2024-09-24 20-56-03](https://github.com/user-attachments/assets/ea3957ed-a40b-453e-b21f-9abaf6094082)
 
-### c. alankan instruksi subtitute user, kemudian keluar dengan perintah exit sebagai berikut: $ su mahasiswa, $ exit kemudian gunakan opsi – sebagai berikut : $ su – mahasiswa $ exit Jelaskan perbedaan kedua utilitas tersebut.
+### c. Jalankan instruksi subtitute user, kemudian keluar dengan perintah exit sebagai berikut: $ su mahasiswa, $ exit kemudian gunakan opsi – sebagai berikut : $ su – mahasiswa $ exit Jelaskan perbedaan kedua utilitas tersebut.
 ![Screenshot from 2024-09-24 21-10-55](https://github.com/user-attachments/assets/3f1d96e3-510d-4ed4-8bf6-8dea803c1506)
 ![Screenshot from 2024-09-24 21-12-49](https://github.com/user-attachments/assets/ee1c676f-e066-4080-8893-d65f1e7b2488)
 
@@ -26,7 +26,7 @@
 ![Screenshot from 2024-09-24 21-26-01](https://github.com/user-attachments/assets/98d3809e-9f99-4477-baa5-660ffcce9748)
 ![Screenshot from 2024-09-24 21-31-18](https://github.com/user-attachments/assets/cd1b3304-bd03-45ef-b220-31143f1a52a6)
 
-### b. ksperimen hasil PS1 :
+### b. Eksperimen hasil PS1 :
 ![Screenshot from 2024-09-24 22-13-01](https://github.com/user-attachments/assets/6ae1682d-18a2-4bd0-85a1-7956cbecb3ae)
 
 ## 3. Logout
@@ -36,24 +36,30 @@
 
 ## 4. Bash script
 ### a. uat 3 buah script p1.sh, p2.sh, p3.sh dengan isi masing-masing : 
+```
 p1.sh 
 #! /bin/bash
 echo “Program p1”
 ls –l
+```
 ![Screenshot from 2024-09-24 22-46-48](https://github.com/user-attachments/assets/a361e249-a70b-44a4-bcde-f337cddb36f2)
 ![Screenshot from 2024-09-24 22-46-32](https://github.com/user-attachments/assets/c73227a8-172b-426f-b7d3-9b1ca4f86809)
 
+```
 p2.sh
 #! /bin/bash
 echo “Program p2”
 who
+```
 ![Screenshot from 2024-09-24 22-50-08](https://github.com/user-attachments/assets/1428eca4-fea2-4f3b-81e7-3881730957bd)
 ![Screenshot from 2024-09-24 22-49-32](https://github.com/user-attachments/assets/919b3ff8-b327-4962-a299-c7d50930e8c2)
 
+```
 p3.sh
 #! /bin/bash
 echo “Program p3”
 ps x
+```
 ![Screenshot from 2024-09-24 22-52-00](https://github.com/user-attachments/assets/596ca918-9785-4a97-9a56-220856ab8b26)
 ![Screenshot from 2024-09-24 22-52-53](https://github.com/user-attachments/assets/bee47bf7-4ddf-47fa-b249-e75abdcd5889)
 
@@ -75,33 +81,40 @@ $ ( ./p1.sh ; ./p3.sh ) &
 
 ## 5. Jobs
 ### a. Buat shell-script yang melakukan loop dengan nama pwaktu.sh, setiap 10 detik, kemudian menyimpan tanggal dan jam pada file hasil.
+```
 #!/bin/bash
 while [ true ]
 do
 date >> hasil
 sleep 10
 done
+```
 ![Screenshot from 2024-09-25 07-53-41](https://github.com/user-attachments/assets/e67bc67d-6ae4-45b7-89db-877bbb891108)
 ![Screenshot from 2024-09-25 07-51-06](https://github.com/user-attachments/assets/684a7d9d-7e06-42c8-b4e4-042077e19066)
 ![Screenshot from 2024-09-25 07-56-47](https://github.com/user-attachments/assets/12e20bc8-c2dc-4f0e-835e-7e0d48701784)
 
 ### b. jalankan sebagai background; kemudian jalankan satu program (utilitas find) di background sebagai berikut :
+```
 $ jobs
 $ find / -print > files 2>/dev/null &
 $ jobs
+```
 ![Screenshot from 2024-09-25 08-01-09](https://github.com/user-attachments/assets/b49812ad-6e8f-4d94-8802-67107db72ccc)
 ![Screenshot from 2024-09-25 08-07-05](https://github.com/user-attachments/assets/0fd641d7-5302-46ce-abb4-2f1bd4e2fa7d)
 
-### c. jadikan program ke 1 sebagai foregro
-und, tekan ^Z dan kembalikan program tersebut ke background
+### c. jadikan program ke 1 sebagai foreground, tekan ^Z dan kembalikan program tersebut ke background
+```
 $ fg %1
 $ bg
+```
 ![Screenshot from 2024-09-25 08-10-52](https://github.com/user-attachments/assets/5eb7a9b5-8da6-41a0-9f08-668d56828d71)
 ![Screenshot from 2024-09-25 08-16-40](https://github.com/user-attachments/assets/d8a0e60a-4c7b-41a1-80af-942762ccb908)
 
-### stop program background dengan utilitas kil
+### stop program background dengan utilitas kill
+```
 $ ps x
 $ kill [Nomor PID]
+```
 ![Screenshot from 2024-09-25 08-30-04](https://github.com/user-attachments/assets/c965ca64-a9e2-4faa-92e3-0a783c90de6f)
 ![Screenshot from 2024-09-25 08-30-32](https://github.com/user-attachments/assets/617a2622-adc4-4311-a32f-a6339d32bde0)
 ![Screenshot from 2024-09-25 08-31-02](https://github.com/user-attachments/assets/1e6f9ac5-f80d-4d58-b11b-4bce357e4440)
@@ -110,8 +123,10 @@ $ kill [Nomor PID]
 
 ## 6. History
 ### a. Ganti nilai HISTSIZE dari 1000 menjadi 20
+```
 $ HISTSIZE=20
 $ h
+```
 ![Screenshot from 2024-09-25 08-37-56](https://github.com/user-attachments/assets/09d66ab0-d7c0-45d6-b2bc-901dfa5cb026)
 
 ### b. Gunakan fasilitas history dengan mengedit instruksi baris ke 5 dari instruksi yang terakhir dilakukan
